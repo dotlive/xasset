@@ -744,7 +744,11 @@ namespace libx
 
         internal override void Load()
         {
+#if UNITY_2018_1_OR_NEWER
+            _request = UnityWebRequestAssetBundle.GetAssetBundle(url);
+#else
             _request = UnityWebRequest.GetAssetBundle(url);
+#endif
             _request.SendWebRequest();
             loadState = LoadState.LoadAssetBundle;
         }

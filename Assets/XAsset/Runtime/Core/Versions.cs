@@ -114,6 +114,8 @@ namespace libx
 			if (!File.Exists (filename))
 				return -1;
 			using (var stream = File.OpenRead (filename)) {
+                if (stream.Length == 0)
+                    return -1;
 				var reader = new BinaryReader (stream);
 				return reader.ReadInt32 ();
 			}

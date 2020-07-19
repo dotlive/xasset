@@ -116,13 +116,14 @@ namespace libx
 
         private void OnApplicationFocus(bool hasFocus)
         {
-#if UNITY_EDITOR
-            return;
-#endif
             if (_reachabilityChanged || _step == STEP_IDLE)
             {
                 return;
-            } 
+            }
+
+#if UNITY_EDITOR
+            return;
+#else
             if (hasFocus)
             { 
                 MessageBox.CloseAll();
@@ -142,6 +143,7 @@ namespace libx
                     _downloader.Stop(); 
                 }
             }
+#endif
         }
 
         private bool _reachabilityChanged = false;
