@@ -100,7 +100,7 @@ namespace libx
 				return "Windows";
 #if UNITY_2017_3_OR_NEWER
 			case BuildTarget.StandaloneOSX:
-				return "OSX";
+				return "iOS";
 #else
                 case BuildTarget.StandaloneOSXIntel:
                 case BuildTarget.StandaloneOSXIntel64:
