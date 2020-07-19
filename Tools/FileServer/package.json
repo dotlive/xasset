@@ -1,0 +1,14 @@
+{
+  "name": "file-server",
+  "version": "1.0.0",
+  "description": "资源服务器",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "dotlive",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
